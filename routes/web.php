@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,8 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/**
+ * FITUR AUTENTIKASI
+ * 
+ * Untuk menerapkan autentikasi, tambahkan ->middleware(["auth", "verified"]).
+ * Contoh : Route::get('/', function () { return view('welcome'); })->middleware(["auth", "verified"]);
+ */
+
 Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes();
 require __DIR__.'/auth.php';
