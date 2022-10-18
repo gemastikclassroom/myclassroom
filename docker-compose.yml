@@ -1,0 +1,12 @@
+services:
+  database:
+    container_name: 'mysql'
+    image: 'mysql:8.0.29'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_DATABASE: 'laravel'
+    restart: always
