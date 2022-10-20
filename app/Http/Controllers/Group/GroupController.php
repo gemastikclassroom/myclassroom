@@ -65,4 +65,26 @@ class GroupController extends Controller
             'data' => $group
         ], 201);
     }
+
+    public function delete($id)
+    {
+        // TODO: add authentication
+        $group = Group::find($id);
+
+        if ($group == null) {
+            return response()->json([
+                'code' => 404,
+                'status' => 'not found',
+                'message' => 'Group not found'
+            ], 404);
+        }
+        
+        $group->delete();
+
+        return response()->json([
+            'code' => 200,
+            'status' => 'success',
+            'message' => 'Group deleted'
+        ]);
+    }
 }

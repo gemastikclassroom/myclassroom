@@ -24,8 +24,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('groups', [GroupController::class, 'index']);
 Route::post('groups', [GroupController::class, 'create']);
 Route::get('groups/{id}', [GroupController::class, 'findById']);
+Route::delete('groups/{id}', [GroupController::class, 'delete']);
+
 Route::post('groups/members', [MemberController::class, 'add']);
+Route::get('groups/members/{id}', [MemberController::class, 'findAllMemberById']);
+Route::delete('groups/members/{id}', [MemberController::class, 'leave']);
+
 Route::post('groups/posts', [PostController::class, 'create']);
 Route::get('groups/posts/{id}', [PostController::class, 'findAllPost']);
+Route::delete('groups/posts/{id}', [PostController::class, 'delete']);
 Route::get('groups/posts/{group_id}/{post_id}', [PostController::class, 'findPost']);
 

@@ -61,4 +61,45 @@ class MemberController extends Controller
             'data' => $result,
         ], 201);
     }
+
+    public function findAllMemberById($id) {
+        $group = Group::find($id);
+
+        if ($group == null) {
+            return response()->json([
+                'code' => 404,
+                'status' => 'not found',
+                'message' => 'Group not found'
+            ], 404);
+        }
+
+        $members = GroupMember::where('group_id', $id)->get();
+
+        return response()->json([
+            'code' => 200,
+            'status' => 'success',
+            'data' => $members,
+        ], 200);
+    }
+
+    public function leave($id) {
+        // TODO: add authentication latel
+        $groupMember = GroupMember::find($id);
+        
+        if ($groupMember == null) {
+            return response()->json([
+                'code' => 404,
+                'status' => 'not found',
+                'message' => 'Member not found'
+            ], 404);
+        }
+
+        $groupMember->delete();
+
+        return response()->json([
+            'code' => 200,
+            'status' => 'success',
+            'message' => 'Group member deleted'
+        ]);
+    }
 }

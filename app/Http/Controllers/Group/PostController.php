@@ -118,4 +118,30 @@ class PostController extends Controller
             'data' => $posts
         ]);
     }
+
+    public function delete($id)
+    {
+        // TODO: add authentication later
+        $post = DB::table('group_posts')
+            ->where('id', $id)
+            ->first();
+
+        if ($post == null) {
+            return response()->json([
+                'code' => 404,
+                'status' => 'not found',
+                'message' => 'Post not found'
+            ], 404);
+        }
+
+        DB::table('group_posts')
+            ->where('id', $id)
+            ->delete();
+
+        return response()->json([
+            'code' => 200,
+            'status' => 'success',
+            'message' => 'Post deleted'
+        ]);
+    }
 }
