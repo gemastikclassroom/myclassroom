@@ -31,6 +31,7 @@ class CreateNewPostRequest extends FormRequest
             'content' => 'required|string',
             'group_id' => 'required|integer',
             'member_id' => 'required|integer',
+            'attachment' => 'string',
         ];
     }
 
