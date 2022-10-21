@@ -10,6 +10,7 @@
 - ```cd <nama_directory_project>```
 - ```composer install```
 - ```npm install```
+- ```npm run build```
 - ```php artisan serve```
 - ```npm run dev```
 - ```composer dump-autoload```
