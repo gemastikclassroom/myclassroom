@@ -3,7 +3,7 @@ import Alpine from 'alpinejs';
 import '../css/app.css';
 
 // React components
-import './Components/App.jsx';
+import './Components/Navbar.jsx';
 
 window.Alpine = Alpine;
 
