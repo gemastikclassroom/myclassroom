@@ -26,7 +26,7 @@ class Navbar extends React.Component {
 
                             {/* <!-- Primary Navbar items --> */}
                             <div className="hidden md:flex items-center space-x-1">
-                                <a href="#" className="py-4 px-2 text-slate-500 dark:text-gray-300 font-semibold">Home</a>
+                                <a href="#" className="py-4 px-2 text-slate-500 dark:text-gray-300 font-semibold">Hosa</a>
                                 <a href="#" className="py-4 px-2 text-slate-500 dark:text-gray-300 font-semibold">Classes</a>
                                 <a href="#" className="py-4 px-2 text-slate-500 dark:text-gray-300 font-semibold">Assignments</a>
                             </div>
@@ -63,7 +63,7 @@ class Navbar extends React.Component {
                 {/* <!-- Mobile menu --> */}
                 <div className="hidden mobile-menu">
                     <ul className="">
-                        <li className="active"><a href="index.html" className="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Home</a></li>
+                        <li className="active"><a href="index.html" className="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Ho</a></li>
                         <li><a href="#services" className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Services</a></li>
                         <li><a href="#about" className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">About</a></li>
                         <li><a href="#contact" className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Contact Us</a></li>

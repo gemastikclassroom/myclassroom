@@ -3,7 +3,8 @@ import "../css/app.css";
 import "./bootstrap";
 
 // React components
-import "./Components/Navbar.jsx";
+// import "./Components/Navbar";
+import "./Components/App.jsx";
 
 window.Alpine = Alpine;
 

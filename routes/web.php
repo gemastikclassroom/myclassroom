@@ -21,9 +21,9 @@ use Illuminate\Support\Facades\Route;
  * Contoh : Route::get('/', function () { return view('welcome'); })->middleware(["auth", "verified"]);
  */
 
-Route::get('/', function () {
-    return view("welcome");
-});
 
 Auth::routes();
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
+
+Route::view('/{path?}', 'welcome')
+    ->where('path', '.*');
