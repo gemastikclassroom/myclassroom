@@ -1,11 +1,11 @@
-import { Navbar } from "@material-tailwind/react";
 import React from "react";
+import NavBar from "../secnav/Nav";
 
 const Beranda = () => {
     return (
         <>
-            <Navbar />
-            <h1>Beranda</h1>
+            <NavBar />
+            <h1>Beranda saya kenapa ya</h1>
         </>
     );
 };
